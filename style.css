@@ -73,6 +73,12 @@ body{
     float: left;
     display: block;
     color: red;
+    cursor: pointer;
+}
+.menu li a:hover{
+   
+    color: red;
+ 
 }
 
 .navigator{
@@ -105,11 +111,16 @@ background-color: #ef6c64;
     width: 92.1578%;
     height: 595px;
     display: flex;
-    background-color: #ef6c64; 
+    color: white;
 }
 .arrow_r{
+    cursor: 	w-resize;
     margin-top: 29.9%;
     margin-left: 2px;
+}
+.arrow_r:hover{
+    cursor: 	w-resize;
+   
 }
 
 .mobile_icon_vert img{
@@ -125,6 +136,10 @@ background-color: #ef6c64;
     margin-top: 29.9%;
     transform: scale(-1, 1);
     margin-left: 24px;
+}
+.arrow_l:hover{
+    cursor: 	w-resize;
+   
 }
 .mid_bottom{
     width: 100%;
