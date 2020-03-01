@@ -86,7 +86,7 @@ body{
 }
   .main_wrapper{
     width: 1020px;
-    height: 1200px;
+   
     margin: 0 auto;
   }
   .header{
@@ -186,6 +186,7 @@ body{
     grid-auto-rows: minmax(220px auto);
     grid-column-gap: 20px;
     grid-row-gap: 16px;
+    overflow: hidden;
 }
 .main_bottom{
   width: 100%;
@@ -199,9 +200,10 @@ body{
   background-color: #f1f1f1;
 }
 .footer_bottom{
-  width: 100%;
+  max-width: 1020px;
   height: 6px;
   background-color: #ffffff;
+  margin: 0 auto;
   
 }
 .footer_text_content{
@@ -337,4 +339,7 @@ color: #6a718c;
 }
 .element_linkedin{
   margin-left: 4px;
+}
+.footer_bottom{
+
 }
