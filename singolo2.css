@@ -10,6 +10,71 @@
          url('assets/fonts/lato-v16-latin-ext-regular.ttf') format('truetype'), /* Safari, Android, iOS */
          url('assets/fonts/lato-v16-latin-ext-regular.svg#Lato') format('svg'); /* Legacy iOS */
   }
+
+
+  @font-face {
+    font-family: 'fontello';
+    src: url('font/fontello.eot?87898145');
+    src: url('font/fontello.eot?87898145#iefix') format('embedded-opentype'),
+         url('font/fontello.woff2?87898145') format('woff2'),
+         url('font/fontello.woff?87898145') format('woff'),
+         url('font/fontello.ttf?87898145') format('truetype'),
+         url('font/fontello.svg?87898145#fontello') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
+    speak: none;  
+  }
+  /* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+  /* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+  /*
+  @media screen and (-webkit-min-device-pixel-ratio:0) {
+    @font-face {
+      font-family: 'fontello';
+      src: url('../font/fontello.svg?87898145#fontello') format('svg');
+    }
+  }
+  */
+   
+   [class^="icon-"]:before, [class*=" icon-"]:before {
+    font-family: "fontello";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+   
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    /* opacity: .8; */
+   
+    /* For safety - reset parent styles, that can break glyph codes*/
+    font-variant: normal;
+    text-transform: none;
+   
+    /* fix buttons height, for twitter bootstrap */
+    line-height: 1em;
+   
+    /* Animation center compensation - margins should be symmetric */
+    /* remove if not needed */
+    margin-left: .2em;
+   
+    /* you can be more comfortable with increased icons size */
+    /* font-size: 120%; */
+   
+    /* Font smoothing. That was taken from TWBS */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+   
+    /* Uncomment for 3D effect */
+    /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+  }
+   
+  .icon-twitter:before { content: '\f099'; } /* '' */
+  .icon-facebook:before { content: '\f09a'; } /* '' */
+  .icon-linkedin:before { content: '\f0e1'; } /* '' */
+  .icon-gplus:before { content: '\f30f'; } /* '' */
   *{
     margin: 0;
     padding: 0;
@@ -61,6 +126,8 @@ body{
     text-align: justify;
     margin-top: 27px;
     letter-spacing: 0.002em;
+    letter-spacing: 0.0001em;
+    word-spacing: -1.5px;
   }
 
 
@@ -90,16 +157,20 @@ body{
   /* padding-right: 10px; */
   border: solid 1px #767e9e;
   /* padding: 2px; */
-  padding-left: 7px;
-  padding-right: 7px;
+  padding-left: 8px;
+  padding-right: 6px;
   padding-top: 2px;
   padding-bottom: 3px;
   border-radius: 5px;
   letter-spacing: 0.000002em;
   text-align: justify;
-  margin-right: 9px;
-
+  margin-right: 8px;
 }
+.menu li a:hover{
+  border: solid 1px white;
+  color: white;
+}
+
 .main{
   background-color: #2d303a;
   margin: 0 auto;
@@ -150,6 +221,7 @@ body{
   margin-top: 67px;
   letter-spacing: 0.02em;
   margin-left: 1px;
+  word-spacing: -0.5px;
 }
 .foot_text_one{
 
@@ -161,6 +233,7 @@ body{
   text-align: justify;
   margin-top: 28px;
   letter-spacing: 0.0001em;
+  word-spacing: -1.5px;
 }
 .footer_photo_block{
   height: 300px;
@@ -230,4 +303,38 @@ body{
   margin-top: 11px;
   word-spacing: -1px;
   letter-spacing: 0.001em;
+}
+.foot_description_head_three_icons{
+  display: flex;
+  width: 152px;
+  margin-top: 22px;
+}
+
+.social_list li{
+  display: inline-block;
+  
+}
+.item_social{
+  display: flex;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+border: 1px solid grey;
+border-radius: 50%;
+color: #6a718c;
+}
+.item_social:hover{
+  border: 1px solid white;
+  color: white;
+}
+.element_gplus{
+  margin-left: 4px;
+}
+.element_twitter{
+  margin-left: 4px;
+}
+.element_linkedin{
+  margin-left: 4px;
 }
