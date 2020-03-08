@@ -1,0 +1,148 @@
+.about_footer{
+    width: 100%;
+    height: 728px;
+    margin: 0 auto;
+    background-color: #f1f1f1;
+  }
+  .about_footer_bottom{
+    max-width: 1020px;
+    height: 6px;
+    background-color: #ffffff;
+    margin: 0 auto;
+    
+  }
+  .about_footer_text_content{
+    height: 218px;
+    width: 92.15686% ;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .about_foot_head_one{
+    font-size: 30px;
+    line-height: 18px;
+    color: #666d89;
+    font-family: "Lato";
+    font-weight: 900;
+    text-align: justify;
+    margin-top: 67px;
+    letter-spacing: 0.02em;
+    margin-left: 1px;
+    word-spacing: -0.5px;
+  }
+  .about_foot_text_one{
+  
+    font-size: 18px;
+    line-height: 30px;
+    color: #767e9e;
+    font-family: "Lato";
+    font-weight: 300;
+    text-align: justify;
+    margin-top: 28px;
+    letter-spacing: 0.0001em;
+    word-spacing: -1.5px;
+  }
+  .about_footer_photo_block{
+    height: 300px;
+    width: 92.15686% ;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+   
+    grid-column-gap: 19px;
+  
+  }
+  .error{
+    margin-left: 2px;
+  }
+  .about_footer_photo_description{
+    height: 170px;
+    width: 92.15686% ;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  
+  }
+  .about_description{
+    width: 300px;
+  }
+  .about_foot_description_head_one{
+    font-size: 18px;
+    line-height: 18px;
+    color: #666d89;
+    font-family: "Lato";
+    font-weight: 700;
+    text-align: justify;
+    margin-top: 16px;
+    word-spacing: -1px;
+    letter-spacing: 0.02em;
+  }
+  
+  .about_foot_description_head_two{
+    font-size: 18px;
+    line-height: 18px;
+    color: #666d89;
+    font-family: "Lato";
+    font-weight: 700;
+    text-align: justify;
+    margin-top: 16px;
+    word-spacing: -1px;
+    letter-spacing: 0.01em;
+  }
+  .about_foot_description_head_three{
+    font-size: 18px;
+    line-height: 18px;
+    color: #666d89;
+    font-family: "Lato";
+    font-weight: 700;
+    text-align: justify;
+    margin-top: 16px;
+    word-spacing: -1px;
+    letter-spacing: 0.02em;
+  }
+  .about_foot_description_text_one, .about_foot_description_text_two, .about_foot_description_text_three{
+    font-size: 12px;
+    line-height: 22px;
+    color: #767e9e;
+    font-family: "Lato";
+    font-weight: 400;
+    text-align: justify;
+    margin-top: 11px;
+    word-spacing: -1px;
+    letter-spacing: 0.001em;
+  }
+
+  .about_foot_description_head_three_icons{
+    display: flex;
+    width: 152px;
+    margin-top: 22px;
+  }
+  
+  .social_list li{
+    display: inline-block;
+    
+  }
+  .item_social{
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+  border: 1px solid grey;
+  border-radius: 50%;
+  color: #6a718c;
+  }
+  .item_social:hover{
+    border: 1px solid white;
+    color: white;
+  }
+  .element_gplus{
+    margin-left: 4px;
+  }
+  .element_twitter{
+    margin-left: 4px;
+  }
+  .element_linkedin{
+    margin-left: 4px;
+  }

@@ -1,0 +1,82 @@
+
+  .portfolio{
+    background-color: #2d303a;
+    margin: 0 auto;
+    width: 100%;
+      height: 196px;
+      
+  }
+  
+  .portfolio_content{
+    width: 92.15686%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+ 
+  }
+  .portfolio_tittle{
+    font-size: 30px;
+    line-height: 18px;
+    color: #666d89;
+    font-family: "Lato";
+    font-weight: 900;
+    text-align: justify;
+    margin-top: 69px;
+    letter-spacing: 0.02em;
+}
+  
+
+  .portfolio_tittle_text{
+   
+    font-size: 18px;
+    line-height: 30px;
+    color: #767e9e;
+    font-family: "Lato";
+    font-weight: 300;
+    text-align: justify;
+    margin-top: 27px;
+    letter-spacing: 0.002em;
+    letter-spacing: 0.0001em;
+    word-spacing: -1.5px;
+  }
+
+
+  .portfolio_menu li{
+    float: left;
+    display: block;
+    color: red;
+    cursor: pointer;
+}
+.portfolio_menu li a:hover{
+   
+    color: red;
+ 
+}
+
+.portfolio_navigator{
+  margin-top: 11px;
+}
+.portfolio_menu li a{
+  font-size: 12px;
+  line-height: 22px;
+  color: #767e9e;
+  font-family: "Lato";
+  font-weight: 400;
+  text-align: left;
+  text-decoration: none;
+  /* padding-right: 10px; */
+  border: solid 1px #767e9e;
+  /* padding: 2px; */
+  padding-left: 8px;
+  padding-right: 6px;
+  padding-top: 2px;
+  padding-bottom: 3px;
+  border-radius: 5px;
+  letter-spacing: 0.000002em;
+  text-align: justify;
+  margin-right: 8px;
+}
+.portfolio_menu li a:hover{
+  border: solid 1px white;
+  color: white;
+}
