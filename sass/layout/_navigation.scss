@@ -33,6 +33,11 @@
    
 }
 
+.boring-text::after {
+    content: "*";
+    color: red;
+ }
+
 .header_content_menu_navigation{
     margin: 0;
     padding: 0;

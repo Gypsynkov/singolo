@@ -125,6 +125,7 @@ grid-template-columns: 1fr 1fr 1fr;
 .text_content_one{
     display: flex;
     flex-direction: column;
+
 }
 .foot_head_one{
     margin-left: 20px;
@@ -136,6 +137,7 @@ grid-template-columns: 1fr 1fr 1fr;
     font-weight: 900;
     text-align: justify;
     letter-spacing: 0.002em;
+  
 }
 .foot_text_one{
     font-size: 12px;
@@ -147,6 +149,8 @@ grid-template-columns: 1fr 1fr 1fr;
     margin-left: 21px;
     margin-top: 10px;
     letter-spacing: 0.002em;
+  
+
 }
 .text_content_two{
     display: flex;
