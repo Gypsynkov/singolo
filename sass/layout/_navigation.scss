@@ -1,8 +1,8 @@
 .header{
     height: 90px;
     background-color: #2d303a;
-
     
+
 }
 
 .header_content{
@@ -11,6 +11,7 @@
     margin: 0 auto;
     height: 100%;
     align-items: center;
+    
     
 }
 .header_content_bottom{
@@ -43,7 +44,8 @@
     padding: 0;
     
 }
-.header_content_menu_navigation li{
+
+.tag_link{
     float: left;
     display: block;
     color: red;
@@ -56,10 +58,12 @@
 }
 
 .header_content_navigator{
-    margin-left: 44.4%;
+    //margin-left: 20px;  //44.4%;
     margin-top: 0.91%;
+    padding-left: 430px;
 }
-.header_content_menu_navigation li a{
+
+.tag{
     color: #ffffff;
     font-size: 12px;
     line-height: 6px;
@@ -67,8 +71,17 @@
 font-weight: 500;
 text-decoration: none;
 text-transform: uppercase;
-padding-left: 29px;
+//padding-left: 29px;
 letter-spacing:  0.000002em;
 text-align: justify;
+margin-left: 10px;
+padding: 5px;
 
+}
+
+.active{
+   border: 1px solid white;
+   background-color: black;
+   border-radius: 10px;
+   
 }

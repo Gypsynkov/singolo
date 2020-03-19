@@ -1,48 +1,113 @@
-.slider_wrapper{
+
+
+.slider {
+    height: 594px;
+    background-color: #f06c64;
+    border-bottom: 6px solid #ea676b;
+}
+
+.slider_content {
+    position: relative;
     width: 1020px;
-    height: 595px;
-    display: block;
-    
-    background-color: #ef6c64; 
-    }
-    .slider_content{
-        margin: 0 auto;
-        width: 92.1578%;
-        height: 595px;
-        display: flex;
-        color: white;
-    }
-    .slider_content_arrow_r{
-        cursor: 	w-resize;
-        margin-top: 29.9%;
-        margin-left: 2px;
-    }
-    .slider_content_arrow_r:hover{
-        cursor: 	w-resize;
-       
-    }
-    
-    .slider_content_mobile_icon_vert img{
-        margin-left: 52px;
-        
-        margin-top: -17px;
-    }
-    .slider_content_mobile_icon_horizon img{
-        margin-left: -332px;
-        margin-top: 69px;
-    }
-    .slider_content_arrow_l{
-        margin-top: 29.9%;
-        transform: scale(-1, 1);
-        margin-left: 24px;
-    }
-    .slider_content_arrow_l:hover{
-        cursor: 	w-resize;
-       
-    }
-    .slider_content_bottom{
-        width: 100%;
-        height: 5px;
-        background-color: #ea676b;
-        
-    }
+    height: inherit;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slide {
+    opacity: 0;
+    z-index: 1;
+    padding-top: 10px;
+}
+
+.slide_2 {
+    height: 594px;
+}
+
+.phone_one {
+    top: 53px;
+    left: 112px;
+}
+
+.phone_two {
+    transform: rotate(90deg);
+    top: 52px;
+    right: 258px;
+}
+
+.none {
+    filter: brightness(0) opacity(1) drop-shadow(0 0 0 rgb(0, 0, 0));
+
+
+}
+
+.showing {
+    opacity: 1;
+    z-index: 2;
+
+}
+
+.slider_phone {
+    position: absolute;
+    z-index: 1;
+}
+
+.slider_img:hover {
+    cursor: pointer;
+}
+
+.slider_shadow {
+    opacity: 0.15;
+    position: absolute;
+}
+
+.shadow_one {
+    top: 53px;
+    right: 668px;
+}
+
+.shadow_two {
+    transform: scale(1, -1) rotate(90deg);
+    top: 53px;
+    right: 233px;
+}
+
+.slider_img {
+    position: absolute;
+    z-index: 2;
+}
+
+.img_one {
+    top: 115px;
+    left: 123px;
+}
+
+.img_two {
+    top: 185px;
+    right: 199px;
+}
+
+.slider_arrow {
+    position: absolute;
+    z-index: 5;
+    width: 16px;
+}
+
+.slider_arrow:hover {
+    cursor: pointer;
+    filter: brightness(0.8);
+}
+
+.arrow_left {
+    z-index: 200;
+    left: 42px;
+    top: 281px;
+}
+
+.arrow_right {
+    z-index: 200;
+    right: 41px;
+    top: 281px;
+}
+

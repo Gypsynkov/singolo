@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     word-spacing: 0;
+    
 }
 body{
     margin: 0px;
@@ -12,4 +13,9 @@ body{
     width: 1020px;
     height: 1200px;
     margin: 0 auto;
+  
 }
+
+html {
+    scroll-behavior: smooth;
+  }
