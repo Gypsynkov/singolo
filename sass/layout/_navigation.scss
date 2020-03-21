@@ -5,6 +5,19 @@
 
 }
 
+.pseudo_head{
+    height: 90px;
+    margin: 0 auto;
+    width: 100%;
+}
+#home{
+    position: fixed;
+    width: 1020px;
+    height: 90px;
+    z-index: 100;
+
+}
+
 .header_content{
     display: flex;
      width: 93.137%;

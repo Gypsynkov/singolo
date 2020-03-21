@@ -1,74 +1,151 @@
 
-window.onload = function(){
-    addTagsClickHandler();
-    /*
-    addActiveClickHandler();
-    
-    */
 
-}
 
-//Header
-let menuBlock = document.querySelector('.header_content_navigator');
- addTagsClickHandler = () =>{
-menuBlock.addEventListener('click', (element)=>{
-    if(element.target.classList.contains('tag')){
-        let targetedTags = event.target;
-        removeSelectedTags();
+let headerId = document.getElementById('home');
+let servicesId = document.getElementById('services');
+let portfolioId = document.getElementById('portfolio');
+let aboutId = document.getElementById('about');
+let contactId = document.getElementById('contact');
+let menuNuvbar = document.getElementById('menu');
 
-    targetedTags.classList.add('active');
-    console.log(element)
-    }
-})
-}
+
+
+// Remove Class
 const removeSelectedTags = () =>{
-    menuBlock.querySelectorAll('.tag').forEach(el=>el.classList.remove('active'))
+    menuNuvbar.querySelectorAll('.tag').forEach((el)=>{
+        el.classList.remove('active')})
 }
-//Scrool
-function smoothScroll(Element) {
 
-    Element = document.getElementById(Element);
-    let selectedPosX = 0;
-    let selectedPosY = 0;
-    while (Element != null) {
-        selectedPosX += Element.offsetLeft;
-        selectedPosY += Element.offsetTop;
-        Element = Element.offsetParent;
+//Scrolling
+document.addEventListener('scroll', ()=>{
+    console.log(servicesId.offsetTop)
+    if(window.scrollY < servicesId.offsetTop - headerId.offsetHeight){
+        removeSelectedTags();
+document.getElementById('home_link').classList.add('active');
     }
-    window.scrollTo(selectedPosX, selectedPosY);
+    if(window.scrollY >= servicesId.offsetTop - headerId.offsetHeight && window.scrollY< portfolioId.offsetTop - headerId.offsetHeight){
+        removeSelectedTags();
+document.getElementById('services_link').classList.add('active');
     }
+    if(window.scrollY>= portfolioId.offsetTop - headerId.offsetHeight){
+        removeSelectedTags();
+document.getElementById('portfolio_link').classList.add('active');
+    }
+
+    if(window.scrollY>= aboutId.offsetTop - headerId.offsetHeight){
+        removeSelectedTags();
+document.getElementById('about_link').classList.add('active');
+    }
+    if(window.scrollY>= contactId.offsetTop - headerId.offsetHeight){
+        removeSelectedTags();
+document.getElementById('contact_link').classList.add('active');
+    }
+    if (window.scrollY + 1 >= document.documentElement.scrollHeight - document.documentElement.clientHeight) {
+        removeSelectedTags();
+        document.getElementById('contact_link').classList.add('active');
+    }
+
+})
+
+// move to hook
+let hooks = document.querySelectorAll('a[href*="#"]')
+for (let item of hooks) {
+    item .addEventListener('click', event => {
+        event.preventDefault()
+        const currentLinkId = item .getAttribute('href').substr(1)
+        document.getElementById(currentLinkId ).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        })
+    })
+}
+
+//add active
+addTagsClickHandler = () =>{
+    menuNuvbar.addEventListener('click', (element)=>{
+        if(element.target.classList.contains('tag')){
+            let targetedTags = event.target;
+            removeSelectedTags();
+    
+        targetedTags.classList.add('active');
+    
+        }
+    })
+    }
+
 //Slides and phone_screen_switch    
 
-let slides = document.querySelectorAll('#slides .slide');
-let sliderBlock = document.getElementById('slider_section');
-let currentSlide = 0;
+let items = document.querySelectorAll('.item');
+let currentItem = 0;
+let isEnabled = true;
 
-let slider = () => {
-    slides[currentSlide].className += 'slide';
-    currentSlide = (currentSlide + 1) % slides.length;
-    if (slides[currentSlide].classList.contains('blue')) {
-        sliderBlock.style.backgroundColor = '#648bf0';
-        sliderBlock.style.borderBottomColor = '#5173cb';
-        slides[currentSlide].className += ' showing';
-    } else {
-        sliderBlock.style.backgroundColor = '#f06c64';
-        sliderBlock.style.borderBottomColor = '#ea676b';
-        slides[currentSlide].className += ' showing';
+function changeCurrentItem(n) {
+    currentItem = (n + items.length) % items.length;
+}
+
+function hideItem(direction) {
+    isEnabled = false;
+    items[currentItem].classList.add(direction);
+    items[currentItem].addEventListener('animationend', function() {
+        this.classList.remove('selected', direction);
+    })
+}
+
+function showItem(direction) {
+    items[currentItem].classList.add('next', direction);
+    items[currentItem].addEventListener('animationend', function() {
+        this.classList.remove('next', direction);
+        this.classList.add('selected');
+        isEnabled = true;
+    })
+}
+
+function previousItem(n) {
+    hideItem('to-right');
+    changeCurrentItem(n - 1);
+    showItem('from-left');
+}
+
+function nextItem(n) {
+    hideItem('to-left');
+    changeCurrentItem(n + 1);
+    showItem('from-right');
+}
+document.querySelector('.arrow_right').addEventListener('click', function() {
+    if (isEnabled) {
+        previousItem(currentItem)
     }
-}
-let screenSwitcher = () => {
-    let elem = this.event.target;
-    if (elem.classList.contains('none'))
-        elem.classList.remove('none')
+});
+document.querySelector('.arrow_left').addEventListener('click', function() {
+    if (isEnabled) {
+        nextItem(currentItem)
+    }
+});
+
+// lock screen in slider
+let firstPhoneScreen = document.getElementById('slider_img_one');
+let secondPhoneScreen = document.getElementById('slider_img_two');
+let buttonFirstPhone = () => {
+    if (firstPhoneScreen.classList.contains('none'))
+    firstPhoneScreen.classList.remove('none')
     else
-        elem.classList.add('none');
+    firstPhoneScreen.classList.add('none');
 }
+let buttonSecondPhone = () => {
+    if (secondPhoneScreen.classList.contains('none'))
+    secondPhoneScreen.classList.remove('none')
+    else
+    secondPhoneScreen.classList.add('none');
+}
+
+
 //Random navigator portfolio
 let buttonsPortfolio = document.getElementById('portfolio_buttons');
 let imagePortfolio = document.getElementById('portfolio_images');
 let randomImages = (event) => {
     let target = event.target;
     let srcArray = [];
+    let counter = 0;
     if (target.tagName == 'SPAN') {
         buttonsPortfolio.querySelectorAll('span').forEach(item => {
             item.classList.remove('button_active');
@@ -76,27 +153,41 @@ let randomImages = (event) => {
         target.classList.add('button_active');
         imagePortfolio.querySelectorAll('img').forEach(item => {
             srcArray.push(item.src);
+            counter++;
             item.src = '';
         })
-        let randArray = srcArray.sort(function() {
-            return Math.random() - 0.5;
-        });
-        imagePortfolio.querySelectorAll('img').forEach((item, index) => {
-            item.src = randArray[index];
+        function random(size) {
+            let array = new Array(size).fill(0).map((item, i) => i);
+            for (let i = array.length - 1; i > 0; i--) {
+                let j = Math.floor(Math.random() * i);
+                let tmp = array[i];
+                array[i] = array[j];
+                array[j] = tmp;
+            }
+            return array;
+        }
+        let randArray = random(counter);
+       
+        imagePortfolio.querySelectorAll('img').forEach((item, index) => {       
+            item.src =srcArray[randArray[index]];
+            item.style.boxShadow = "none";      
         })
     }
 }
+
+
+
+
+
 // portfolio active image
 imagePortfolio.addEventListener('click', event => {
-
     let target = event.target;
-
     if (target.tagName == 'IMG') {
         imagePortfolio.querySelectorAll('img').forEach(item => {
+
             item.style.boxShadow = "none";
-        });
-        
-        event.target.style.boxShadow = "0px 0px 0px 2px rgba(255,255,0,1)";
+        });       
+        event.target.style.boxShadow = "0px 0px 0px 5px rgba(240,108,100,1)";
     }
 })
 

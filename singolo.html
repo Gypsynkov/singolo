@@ -10,10 +10,12 @@
 </head>
 
 <body>
-    <div class="main_wrapper">
-
+    <div id="wrapper" class="main_wrapper">
+       
+        <div id="home"> 
         <header>
-            <h1 id="home"></h1>
+            
+            <h1 ></h1>
             <div class="header">
                 <div class="header_content">
                     <div class="header_content_logo">
@@ -23,11 +25,11 @@
                         <div class="header_content_menu">
 
                             <ul id="menu" class="header_content_menu_navigation">
-                                <li class="tag_link"><a class="tag" href="#home">Home</a></li>
-                                <li class="tag_link"><a class="tag" href="#services">Services</a></li>
-                                <li class="tag_link"><a class="tag" href="#portfolio">Portfolio</a></li>
-                                <li class="tag_link"><a class="tag" href="#about">About</a></li>
-                                <li class="tag_link"><a class="tag" href="#contact">Contact</a></li>
+                                <li class="tag_link"><a id ="home_link" class="tag" href="#pseudo_head">Home</a></li>
+                                <li class="tag_link"><a id ="services_link" class="tag" href="#services">Services</a></li>
+                                <li class="tag_link"><a id ="portfolio_link" class="tag" href="#portfolio">Portfolio</a></li>
+                                <li class="tag_link"><a id ="about_link" class="tag" href="#about">About</a></li>
+                                <li class="tag_link"><a id ="contact_link"  class="tag" href="#contact">Contact</a></li>
                             </ul>
 
                         </div>
@@ -37,20 +39,59 @@
             <div class="header_content_bottom">
 
             </div>
+       
         </header>
-        <main class="Slider">
+    </div>
+    <div id="pseudo_head" class="pseudo_head"></div>
+
+
+    <section class="slider carousel" id='slider-section'>
+
+        <div class="slider_content item_container" id='slides'>
+
+            <div class="slide slide_1 item selected">
+                <div class="all_phone">
+                    <img id="slider_img_one" class="slider_img img_one"   src="assets/image/screen_first.png"  >
+                    <img id="slider_img_two" class="slider_img img_two"   src="assets/image/Screen_second.png"  >
+                    <img class="slider_button  button_one"                src="assets/image/iphone_button.png"  onclick="buttonFirstPhone()">
+                    <img class="slider_button  button_two"                src="assets/image/iphone_button.png" onclick="buttonSecondPhone()">
+                    <img class="slider_phone   phone_one"                 src="assets/image/mobile.png" >
+                    <img class="slider_shadow  shadow_one"                src="assets/image/shadow.png" >
+                    <img class="slider_phone   phone_two"                 src="assets/image/mobile.png" >
+                    <img class="slider_shadow  shadow_two"                src="assets/image/shadow.png" >
+                </div>
+                <!-- <img src="./assets/img/slide_1.png"> -->
+            </div>
+
+            <div class="slide slide_2  blue item">
+                <div class="all_phone">
+                    <img class="blue" src="assets/image/Slide-2.png">
+                </div>
+
+            </div>
+
+          
+        </div>
+<div class="arrows">
+                <img src="assets/image/left.svg" class="slider_arrow arrow_left arrow left" >
+                <img src="assets/image/right.svg"  class="slider_arrow arrow_right arrow right">
+            </div>
+
+    </section>
+<!--
+        <div class="Slider">
             <section id='slider_section' class="slider">
                 <div id='slides' class="slider_content">
                     <div class="slide slide_1 showing">
-                        <img class="slider_img     img_one" src="assets/image/screen_first.png"
-                            onclick="screenSwitcher()">
-                        <img class="slider_img     img_two" src="assets/image/Screen_second.png"
-                            onclick="screenSwitcher()">
+                        <img class="slider_img     img_one" src="assets/image/screen_first.png" onclick="screenSwitcher()">
+                        <img class="slider_img     img_two" src="assets/image/Screen_second.png" onclick="screenSwitcher()">
                         <img class="slider_phone   phone_one" src="assets/image/mobile.png">
                         <img class="slider_shadow  shadow_one" src="assets/image/shadow.png">
                         <img class="slider_phone  phone_two" src="assets/image/mobile.png">
                         <img class="slider_shadow shadow_two" src="assets/image/shadow.png">
                     </div>
+
+                    
                     <div class="slide blue">
                         <img class="slide_2 blue" src="assets/image//Slide-2.png">
                     </div>
@@ -61,9 +102,14 @@
                     </div>
                 </div>
             </section>
+        </div>
 
-            <section class="middle_info">
-                <div id="services" class="text_description" href="#services">
+-->
+
+
+
+            <div id="services" class="middle_info">
+                <div  class="text_description" href="#services">
                     <div class="header_description">
                         <h1>Our Services</h1>
                     </div>
@@ -77,10 +123,10 @@
 
                 </div>
 
-            </section>
-        </main>
+            </div>
+       
 
-        <section class="services_footer">
+        <div  class="services_footer">
             <div class="services_footer_info">
                 <div class="services_footer_content">
                     <div class="ellipse_one">
@@ -146,11 +192,11 @@
 
             </div>
 
-        </section>
+        </div>
         <div class="services_footer_bottom">
         </div>
 
-        <section class="portfolio" id="portfolio">
+        <div class="portfolio" id="portfolio">
             <div class="portfolio_content">
                 <div class="portfolio_title">Portfolio</div>
                 <div class="portfolio_text">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</div>
@@ -175,7 +221,7 @@
                     <img class="image" src="assets/image/singolo2/Layer 12.png">
                 </div>
             </div>
-        </section>
+        </div>
         <div id="about" class="about">
             <div class="about_footer">
                 <div class="about_footer_text_content">
@@ -264,7 +310,7 @@
 
 
 
-        <div class="quote_content">
+        <div id="contact" class="quote_content">
             <div class="quote_content_promo">
                 <h1 class="quote_content_promo_header">
                     Get a Quote
@@ -293,7 +339,7 @@
                     </form>
                 </div>
 
-                <div id="contact" class="quote_content__promo_contact_info">
+                <div  class="quote_content__promo_contact_info">
                     <h1 class="quote_content__promo_contact_info_header">Contact Information </h1>
                     <p class="quote_content__promo_contact_info_content"> Quisque hendrerit purus dapibus, ornare nibh
                         vitae,
