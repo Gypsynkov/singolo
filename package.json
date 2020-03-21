@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Gypsynkov/singolo/issues"
   },
-  "homepage": "https://github.com/Gypsynkov/singolo#readme"
+  "homepage": "https://github.com/Gypsynkov/singolo#readme",
+  "dependencies": {
+    "webpack": "^4.42.0"
+  }
 }

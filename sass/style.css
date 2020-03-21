@@ -216,7 +216,7 @@ body {
 
 .slider_img {
   position: absolute;
-  z-index: 2;
+  z-index: 3;
 }
 
 .img_one {

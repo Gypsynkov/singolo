@@ -40,9 +40,6 @@
     display: block;
     margin: 0 auto;
 }
-
-
-
 .slide_2 {
     background-color: #648BF0;
     position: absolute;
@@ -90,18 +87,24 @@
 
 .shadow_one {
     top: 53px;
+
+
     right: 668px;
 }
 
 .shadow_two {
     transform: scale(1, -1) rotate(90deg);
+
     top: 53px;
+
+
     right: 233px;
 }
 
 .slider_img {
     position: absolute;
-    z-index: 2;
+
+    z-index: 3;
 }
 
 .img_one {

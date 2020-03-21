@@ -1,6 +1,4 @@
 
-
-
 let headerId = document.getElementById('home');
 let servicesId = document.getElementById('services');
 let portfolioId = document.getElementById('portfolio');
@@ -156,21 +154,25 @@ let randomImages = (event) => {
             counter++;
             item.src = '';
         })
-        function random(size) {
+        function randomGrid(size) {
             let array = new Array(size).fill(0).map((item, i) => i);
             for (let i = array.length - 1; i > 0; i--) {
                 let j = Math.floor(Math.random() * i);
                 let tmp = array[i];
+
                 array[i] = array[j];
+
                 array[j] = tmp;
             }
             return array;
         }
-        let randArray = random(counter);
+        let randomArray = randomGrid(counter);
        
         imagePortfolio.querySelectorAll('img').forEach((item, index) => {       
-            item.src =srcArray[randArray[index]];
-            item.style.boxShadow = "none";      
+            item.src =srcArray[randomArray[index]];
+            item.style.boxShadow = "none";   
+            
+            
         })
     }
 }
@@ -190,6 +192,10 @@ imagePortfolio.addEventListener('click', event => {
         event.target.style.boxShadow = "0px 0px 0px 5px rgba(240,108,100,1)";
     }
 })
+
+
+
+
 
 //modal window and form push
 let modalPop = document.getElementById('modal_window');
@@ -211,18 +217,24 @@ const pushForm = () => {
     } else if (inputName .value.length == 0 || inputEmail.value.length == 0) {
 
         modalSub.innerHTML += "<div id='added'>Не заполнены обязательные поля</div>";
+
+
         modalPop.classList.remove('display_none');
 
 
     } else if (!inputName .checkValidity()) {
 
         modalSub.innerHTML += "<div id='added'>Проверьте имя</div>";
+
+
         modalPop.classList.remove('display_none');
 
 
     } else if (!inputEmail.checkValidity()) {
 
+
         modalSub.innerHTML += "<div id='added'>Проверьте введеный email</div>";
+
         modalPop.classList.remove('display_none');
 
 
@@ -230,6 +242,8 @@ const pushForm = () => {
     } else if (inputText.value.length == 0 && inputDescr.value.length == 0) {
 
         modalSub.innerHTML += "<div id='added'>Заполните оставшиеся поля</div>";
+
+
         modalPop.classList.remove('display_none');
 
 
@@ -237,6 +251,8 @@ const pushForm = () => {
     } else if (inputText.value.length == 0 && inputDescr.value.length == 0) {
 
         modalSub.innerHTML += "<div id='added'>Без темы и без описания</div>";
+
+
         modalPop.classList.remove('display_none');
 
 
@@ -244,6 +260,7 @@ const pushForm = () => {
     } else if (inputText.value.length == 0) {
 
         modalSub.innerHTML += "<div id='added'>Без темы</div>";
+
         modalPop.classList.remove('display_none');
 
 
@@ -251,6 +268,8 @@ const pushForm = () => {
     } else if (inputText.value == 'Singolo') {
 
         modalSub.innerHTML += "<div id='added'>Тема: Singolo</div>";
+
+
         modalPop.classList.remove('display_none');
 
 
@@ -258,6 +277,7 @@ const pushForm = () => {
     } else if (inputDescr.value.length == 0) {
 
         modalSub.innerHTML += "<div id='added'>Без описания</div>";
+
         modalPop.classList.remove('display_none');
 
 
@@ -265,10 +285,13 @@ const pushForm = () => {
     } else if (inputDescr.value == 'Portfolio project') {
 
         modalSub.innerHTML += "<div id='added'>Тема: Portfolio project</div>";
+
         modalPop.classList.remove('display_none');
     }
 
 }
+
+
 //close window
 let popWindow = (event) => {
     if (event.target.tagName == "SECTION" || event.target.tagName == "BUTTON") {
