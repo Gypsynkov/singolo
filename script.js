@@ -137,6 +137,18 @@ let buttonSecondPhone = () => {
 }
 
 
+// portfolio active image
+imagePortfolio.addEventListener('click', event => {
+    let target = event.target;
+    if (target.tagName == 'IMG') {
+        imagePortfolio.querySelectorAll('img').forEach(item => {
+
+            item.style.boxShadow = "none";
+        });       
+        event.target.style.boxShadow = "0px 0px 0px 5px rgba(240,108,100,1)";
+    }
+})
+
 //Random navigator portfolio
 let buttonsPortfolio = document.getElementById('portfolio_buttons');
 let imagePortfolio = document.getElementById('portfolio_images');
@@ -181,17 +193,7 @@ let randomImages = (event) => {
 
 
 
-// portfolio active image
-imagePortfolio.addEventListener('click', event => {
-    let target = event.target;
-    if (target.tagName == 'IMG') {
-        imagePortfolio.querySelectorAll('img').forEach(item => {
 
-            item.style.boxShadow = "none";
-        });       
-        event.target.style.boxShadow = "0px 0px 0px 5px rgba(240,108,100,1)";
-    }
-})
 
 
 
