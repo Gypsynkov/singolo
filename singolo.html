@@ -10,10 +10,12 @@
 </head>
 
 <body>
-    <div class="main_wrapper">
-
+    <div id="wrapper" class="main_wrapper">
+       
+        <div id="home"> 
         <header>
-            <h1></h1>
+            
+            <h1 ></h1>
             <div class="header">
                 <div class="header_content">
                     <div class="header_content_logo">
@@ -22,12 +24,12 @@
                     <nav class="header_content_navigator">
                         <div class="header_content_menu">
 
-                            <ul class="header_content_menu_navigation">
-                                <li><a href="">Home</a></li>
-                                <li><a href="">Services</a></li>
-                                <li><a href="">Portfolio</a></li>
-                                <li><a href="">About</a></li>
-                                <li><a href="">Contact</a></li>
+                            <ul id="menu" class="header_content_menu_navigation">
+                                <li class="tag_link"><a id ="home_link" class="tag" href="#pseudo_head">Home</a></li>
+                                <li class="tag_link"><a id ="services_link" class="tag" href="#services">Services</a></li>
+                                <li class="tag_link"><a id ="portfolio_link" class="tag" href="#portfolio">Portfolio</a></li>
+                                <li class="tag_link"><a id ="about_link" class="tag" href="#about">About</a></li>
+                                <li class="tag_link"><a id ="contact_link"  class="tag" href="#contact">Contact</a></li>
                             </ul>
 
                         </div>
@@ -37,48 +39,94 @@
             <div class="header_content_bottom">
 
             </div>
+       
         </header>
-        <main class="Slider">
-            <section class="slider_wrapper">
-                <div class="slider_content">
-                    <div class="slider_content_arrow_r">
-                        <img src="assets/image/chev.svg" alt="arrow">
-                    </div>
-                    <div class="slider_content_mobile_icon_vert">
-                        <img src="assets/image/iPhone Vertical.png" alt="phone">
-                    </div>
-                    <div class="slider_content_mobile_icon_horizon">
-                        <img src="assets/image/iPhone Horizontal.png" alt="phone">
-                    </div>
-                    <div class="slider_content_arrow_l">
-                        <img src="assets/image/chev.svg" alt="arrow">
-                    </div>
+    </div>
+    <div id="pseudo_head" class="pseudo_head"></div>
 
+
+    <section class="slider carousel" id='slider-section'>
+
+        <div class="slider_content item_container" id='slides'>
+
+            <div class="slide slide_1 item selected">
+                <div class="all_phone">
+                    <img id="slider_img_one" class="slider_img img_one"   src="assets/image/screen_first.png"  >
+                    <img id="slider_img_two" class="slider_img img_two"   src="assets/image/Screen_second.png"  >
+                    <img class="slider_button  button_one"                src="assets/image/iphone_button.png"  onclick="buttonFirstPhone()">
+                    <img class="slider_button  button_two"                src="assets/image/iphone_button.png" onclick="buttonSecondPhone()">
+                    <img class="slider_phone   phone_one"                 src="assets/image/mobile.png" >
+                    <img class="slider_shadow  shadow_one"                src="assets/image/shadow.png" >
+                    <img class="slider_phone   phone_two"                 src="assets/image/mobile.png" >
+                    <img class="slider_shadow  shadow_two"                src="assets/image/shadow.png" >
                 </div>
+                <!-- <img src="./assets/img/slide_1.png"> -->
+            </div>
 
-
-            </section>
-            <div class="slider_content_bottom">
+            <div class="slide slide_2  blue item">
+                <div class="all_phone">
+                    <img class="blue" src="assets/image/Slide-2.png">
+                </div>
 
             </div>
 
-            <section class="middle_info">
-                <div class="text_description">
+          
+        </div>
+<div class="arrows">
+                <img src="assets/image/left.svg" class="slider_arrow arrow_left arrow left" >
+                <img src="assets/image/right.svg"  class="slider_arrow arrow_right arrow right">
+            </div>
+
+    </section>
+<!--
+        <div class="Slider">
+            <section id='slider_section' class="slider">
+                <div id='slides' class="slider_content">
+                    <div class="slide slide_1 showing">
+                        <img class="slider_img     img_one" src="assets/image/screen_first.png" onclick="screenSwitcher()">
+                        <img class="slider_img     img_two" src="assets/image/Screen_second.png" onclick="screenSwitcher()">
+                        <img class="slider_phone   phone_one" src="assets/image/mobile.png">
+                        <img class="slider_shadow  shadow_one" src="assets/image/shadow.png">
+                        <img class="slider_phone  phone_two" src="assets/image/mobile.png">
+                        <img class="slider_shadow shadow_two" src="assets/image/shadow.png">
+                    </div>
+
+                    
+                    <div class="slide blue">
+                        <img class="slide_2 blue" src="assets/image//Slide-2.png">
+                    </div>
+
+                    <div class="arrows">
+                        <img class="slider_arrow arrow_left" src="assets/image/left.svg" onclick="slider()">
+                        <img class="slider_arrow arrow_right" src="assets/image/right.svg" onclick="slider()">
+                    </div>
+                </div>
+            </section>
+        </div>
+
+-->
+
+
+
+            <div id="services" class="middle_info">
+                <div  class="text_description" href="#services">
                     <div class="header_description">
                         <h1>Our Services</h1>
                     </div>
                     <div class="main_text_description">
-                        <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.
+                        <p id="needed" class="main_text_description_p">Fusce dapibus, tellus ac cursus commodo, tortor
+                            mauris condimentum.
                             Duis mollis, non commodo luctus, nisi erat &shy; porttitor ligula, eget lacinia odio sem nec
                             elit.
-                            Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p </div>
-
+                            Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
                     </div>
 
-            </section>
-        </main>
+                </div>
 
-        <section class="services_footer">
+            </div>
+       
+
+        <div  class="services_footer">
             <div class="services_footer_info">
                 <div class="services_footer_content">
                     <div class="ellipse_one">
@@ -144,92 +192,42 @@
 
             </div>
 
-        </section>
+        </div>
         <div class="services_footer_bottom">
         </div>
 
-
-
-        <div class="portfolio">
+        <div class="portfolio" id="portfolio">
             <div class="portfolio_content">
-                <div class="portfolio_tittle">
-                    <p class="portfolio_tittle_content">Portfolio</p>
+                <div class="portfolio_title">Portfolio</div>
+                <div class="portfolio_text">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</div>
+                <div id="portfolio_buttons" class="portfolio_buttons"  onclick="randomImages(event)">
+                    <span class="button button_all button_active">All</span>
+                    <span class="button button_web">Web Design</span>
+                    <span class="button button_graphic">Graphic Design</span>
+                    <span class="button button_artwork">Artwork</span>
                 </div>
-                <div class="portfolio_text">
-                    <p class="portfolio_tittle_text">Duis mollis, est non commodo luctus, nisi erat porttitor ligula,
-                        eget
-                        lacinia
-                        odio sem nec elit.</p>
+                <div id="portfolio_images" class="portfolio_images" >
+                    <img class="image" src="assets/image/singolo2/Layer 1.png">
+                    <img class="image" src="assets/image/singolo2/Layer 2.png">
+                    <img class="image" src="assets/image/singolo2/Layer 3.png">
+                    <img class="image" src="assets/image/singolo2/Layer 4.png">
+                    <img class="image" src="assets/image/singolo2/Layer 5.png">
+                    <img class="image" src="assets/image/singolo2/Layer 6.png">
+                    <img class="image" src="assets/image/singolo2/Layer 7.png">
+                    <img class="image" src="assets/image/singolo2/Layer 8.png">
+                    <img class="image" src="assets/image/singolo2/Layer 9.png">
+                    <img class="image" src="assets/image/singolo2/Layer 10.png">
+                    <img class="image" src="assets/image/singolo2/Layer 11.png">
+                    <img class="image" src="assets/image/singolo2/Layer 12.png">
                 </div>
-                <nav class="portfolio_navigator">
-                    <div class="portfolio_menu">
-
-                        <ul class="portfolio_menu_nav">
-                            <li><a href="">All</a></li>
-                            <li><a href="">Web Design</a></li>
-                            <li><a href="">Graphic Design</a></li>
-                            <li><a href="">Artwork</a></li>
-                        </ul>
-
-                    </div>
-                </nav>
             </div>
         </div>
-
-
-        <div class="image_main">
-            <div class="image__main_content">
-                <div class="image">
-                    <img src="assets/image/singolo2/Layer 1.png" alt="icon_1">
-                </div>
-                <div class="image">
-                    <img src="assets/image/singolo2/Layer 2.png" alt="icon_1">
-                </div>
-                <div class="image">
-                    <img src="assets/image/singolo2/Layer 3.png" alt="icon_1">
-                </div>
-                <div class="image">
-                    <img src="assets/image/singolo2/Layer 4.png" alt="icon_1">
-                </div>
-                <div class="image">
-                    <img src="assets/image/singolo2/Layer 5.png" alt="icon_1">
-                </div>
-                <div class="image">
-                    <img src="assets/image/singolo2/Layer 6.png" alt="icon_1">
-                </div>
-                <div class="image">
-                    <img src="assets/image/singolo2/Layer 7.png" alt="icon_1">
-                </div>
-                <div class="image">
-                    <img src="assets/image/singolo2/Layer 8.png" alt="icon_1">
-                </div>
-                <div class="image">
-                    <img src="assets/image/singolo2/Layer 9.png" alt="icon_1">
-                </div>
-                <div class="image">
-                    <img src="assets/image/singolo2/Layer 10.png" alt="icon_1">
-                </div>
-                <div class="image">
-                    <img src="assets/image/singolo2/Layer 11.png" alt="icon_1">
-                </div>
-                <div class="image">
-                    <img src="assets/image/singolo2/Layer 12.png" alt="icon_1">
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="image__main_content_bottom">
-
-        </div>
-
-
-        <div class="about">
+        <div id="about" class="about">
             <div class="about_footer">
                 <div class="about_footer_text_content">
                     <div class="about_foot_head_one">About Us</div>
-                    <div class="about_foot_text_one">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis
+                    <div class="about_foot_text_one">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.
+                        Duis
                         mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce
                         dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</div>
                 </div>
@@ -242,7 +240,8 @@
                 <div class="about_footer_photo_description">
                     <div class="about_description">
                         <div class="about_foot_description_head_one">Adam Jensen</div>
-                        <div class="about_foot_description_text_one">Quisque luctus, quam eget molestie commodo, lacus purus
+                        <div class="about_foot_description_text_one">Quisque luctus, quam eget molestie commodo, lacus
+                            purus
                             cursus purus, nec rutrum tellus dolor id lorem.</div>
                         <div class="about_foot_description_head_three_icons">
                             <ul class="social_list">
@@ -260,7 +259,8 @@
                     </div>
                     <div class="about_description">
                         <div class="about_foot_description_head_two">Desmond Miles</div>
-                        <div class="about_foot_description_text_two">Curabitur vestibulum eget mauris quis laoreet. Phasellus
+                        <div class="about_foot_description_text_two">Curabitur vestibulum eget mauris quis laoreet.
+                            Phasellus
                             in
                             quam laoreet, viverra lacus ut, ultrices velit.</div>
                         <div class="about_foot_description_head_three_icons">
@@ -280,7 +280,8 @@
                     <div class="about_description">
                         <div class="about_foot_description_head_three">Scolara Visari</div>
 
-                        <div class="about_foot_description_text_three">Nulla sed nunc et tortor luctus faucibus. Morbi at
+                        <div class="about_foot_description_text_three">Nulla sed nunc et tortor luctus faucibus. Morbi
+                            at
                             aliquet
                             turpis, et consequat felis. Quisque condimentum.</div>
                         <div class="about_foot_description_head_three_icons">
@@ -300,111 +301,117 @@
 
                 </div>
 
-    </div>
-
-    </div>
-    <div class="about_footer_bottom">
-
-    </div>
-
-
-
-    <div class="quote_content">
-        <div class="quote_content_promo">
-            <h1 class="quote_content_promo_header">
-                Get a Quote
-            </h1>
-            <p class="quote_content__promo_text">
-                Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus,
-                nisi erat porttitor <br> ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus
-                commodo,
-                tortor mauris condimentum nibh
-            </p>
-        </div>
-        <div class="quote_promo">
-            <div class="quote_content__promo_form">
-                <form action="action_page.php" method="GET" target="_self">
-                    <div class="layout-3-rows">
-                        <input class="input_name" type="text" id="name" placeholder="Name (Required)" required>
-                        <input class="input_email" type="email" id="email" placeholder="Email (Required)" required>
-                        <input class="input_subject" type="text" id="subject" placeholder="Subject">
-    
-                        <textarea class="input_describe" name="input_describe" id="describe"
-                            placeholder="Describe your project in detail..."></textarea>
-    
-                    </div>
-                
-                <button class="quote_content__promo_form_button">Submit</button>
-            </form>
             </div>
-    
-            <div class="quote_content__promo_contact_info">
-                <h1 class="quote_content__promo_contact_info_header">Contact Information </h1>
-                <p class="quote_content__promo_contact_info_content"> Quisque hendrerit purus dapibus, ornare nibh
-                    vitae,
-                    viver&shy;ra nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat<br> libero. Nulla sed
-                    nunc et tortor
-                    luctus faucibus. Morbi at<br> aliquet turpis, et consequat felis. </p>
-                <div class="quote_content__promo_location">
-                    <i class="quote-location"></i>
-                    <p class="quote-location_adress">Elm St. 14/05 Lost City</p>
-                </div>
-                <div class="quote_content__promo_phone">
-                    <i class="quote-phone"></i>
-                    <p class="quote-phone_number"><a href="tel:+291464567">03528 331 86 35</a></p>
-                </div>
-                <div class="quote_content__promo_mail">
-                    <i class="quote-mail-alt mail"></i>
-                    <p class="quote-location_mail"><a href="mailto:ask@htmlbook.ru">info@singolo.com</a></p>
 
-                </div>
-    
+        </div>
+        <div class="about_footer_bottom">
+
+        </div>
+
+
+
+        <div id="contact" class="quote_content">
+            <div class="quote_content_promo">
+                <h1 class="quote_content_promo_header">
+                    Get a Quote
+                </h1>
+                <p class="quote_content__promo_text">
+                    Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus,
+                    nisi erat porttitor <br> ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus
+                    commodo,
+                    tortor mauris condimentum nibh
+                </p>
             </div>
-        </div>
-        <div class="quote_line">
-            
-        </div>
-    
-        <div class="quote_footer_content">
-    <div class="quote_footer_content_blocks">
-    <div class="quote_footer_content_blocks_copyright">
-    <p class="blocks_copyright">
-        © Copyright 2013
-    </p>
-    </div>
-    <div class="quote_footer_content_blocks_icons">
-    
-        <div class="quote_foot_description_head_three_icons">
-                        <ul class="quote_social_list">
-                            <li class="quote_element_facebook"><a href="" class="quote_item_social"><i
-                                        class="quote-facebook"></i></a></li>
-                            <li class="quote_element_gplus"><a href="" class="quote_item_social"><i class="quote-gplus"></i></a>
-                            </li>
-                            <li class="quote_element_twitter"><a href="" class="quote_item_social"><i
-                                        class="quote-twitter"></i></a>
-                            </li>
-                            <li class="quote_element_linkedin"><a href="" class="quote_item_social"><i
-                                        class="quote-linkedin"></i></a></li>
-                        </ul>
+            <div class="quote_promo">
+                <div class="quote_content__promo_form">
+                    <form id="form">
+                        <div class="layout-3-rows">
+                            <input class="input_name" type="text" id="name" maxlength="30" pattern="[A-Za-zА-яа-я]{1,30}" title="Имя может содержать только латинские буквы и содержать не более 30 символов" required  placeholder="Name (Required)">
+                            <input class="input_email" type="email" id="email" placeholder="Email (Required)"   required>
+                            <input class="input_subject" type="text" id="subject" placeholder="Subject"   >
+
+                            <textarea class="input_describe"  id="describe"
+                                placeholder="Describe your project in detail..."></textarea>
+
+                        </div>
+
+                        <button type="button"  class="quote_content__promo_form_button" onclick='pushForm()' >Submit</button>
+                    </form>
+                </div>
+
+                <div  class="quote_content__promo_contact_info">
+                    <h1 class="quote_content__promo_contact_info_header">Contact Information </h1>
+                    <p class="quote_content__promo_contact_info_content"> Quisque hendrerit purus dapibus, ornare nibh
+                        vitae,
+                        viver&shy;ra nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat<br> libero. Nulla sed
+                        nunc et tortor
+                        luctus faucibus. Morbi at<br> aliquet turpis, et consequat felis. </p>
+                    <div class="quote_content__promo_location">
+                        <i class="quote-location"></i>
+                        <p class="quote-location_adress">Elm St. 14/05 Lost City</p>
                     </div>
-    </div>
-    </div>
-    
+                    <div class="quote_content__promo_phone">
+                        <i class="quote-phone"></i>
+                        <p class="quote-phone_number"><a href="tel:+291464567">03528 331 86 35</a></p>
+                    </div>
+                    <div class="quote_content__promo_mail">
+                        <i class="quote-mail-alt mail"></i>
+                        <p class="quote-location_mail"><a href="mailto:ask@htmlbook.ru">info@singolo.com</a></p>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="quote_line">
+
+            </div>
+
+            <div class="quote_footer_content">
+                <div class="quote_footer_content_blocks">
+                    <div class="quote_footer_content_blocks_copyright">
+                        <p class="blocks_copyright">
+                            © Copyright 2013
+                        </p>
+                    </div>
+                    <div class="quote_footer_content_blocks_icons">
+
+                        <div class="quote_foot_description_head_three_icons">
+                            <ul class="quote_social_list">
+                                <li class="quote_element_facebook"><a href="" class="quote_item_social"><i
+                                            class="quote-facebook"></i></a></li>
+                                <li class="quote_element_gplus"><a href="" class="quote_item_social"><i
+                                            class="quote-gplus"></i></a>
+                                </li>
+                                <li class="quote_element_twitter"><a href="" class="quote_item_social"><i
+                                            class="quote-twitter"></i></a>
+                                </li>
+                                <li class="quote_element_linkedin"><a href="" class="quote_item_social"><i
+                                            class="quote-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
         </div>
-    
     </div>
-</div>
+
+    <section id="modal_window" class="modal_window display_none"  onclick="popWindow(event)">
+        <div id="modal_submit" class="modal_submit" >
+            <div id='modal_button' class="modal_button" >
+                <button>ok</button>
+             </div>
+        </div>
+    </section>
 
 
 
 
 
+    <script src="script.js"></script>
 
 
-
-
-
-    
 </body>
 
 </html>

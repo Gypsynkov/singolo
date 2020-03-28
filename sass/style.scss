@@ -1,5 +1,7 @@
-@import "base/base";
+@import "abstract/mixin";
 @import "abstract/constants";
+@import "base/base";
+
 @import "base/fonts";
 @import "layout/navigation";
 @import "layout/slider";
@@ -8,3 +10,5 @@
 @import "layout/images-colomn";
 @import "layout/about-us";
 @import "layout/quote";
+@import "layout/form";
+

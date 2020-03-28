@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     word-spacing: 0;
+    
 }
 body{
     margin: 0px;
@@ -9,7 +10,13 @@ body{
 }
 
 .main_wrapper{
-    width: 1020px;
-    height: 1200px;
+    max-width: 1020px;
+
     margin: 0 auto;
+    @include media-tablet{
+background-color: yellow;
+        max-width: 768px;
+        
+    }
+      
 }
