@@ -60,9 +60,9 @@
     top: 53px;
     left: 112px;
     @include media-tablet {
-        transform: scale(0.565, 0.567);
-        top: 11.1%;
-        left: 14.5%;
+        transform: scale(0.75, 0.75);
+        top: 10.1%;
+        left: 7.5%;
     }
 }
 
@@ -72,10 +72,10 @@
     top: 460px;
     z-index: 2;
     @include media-tablet{
-        left: 198px;
-    top: 386px;
-    z-index: 2;
-    transform: scale(0.5);
+        left: 19.0%;
+        top: 70.4%;
+        z-index: 2;
+        transform: scale(0.75);
     }
 }
 
@@ -90,10 +90,10 @@
     z-index: 2;
 
     @include media-tablet{
-        left: 331px;
-        top: 274px;
-        z-index: 3;
-        transform: scale(0.565);
+        left: 41.5%;
+    top: 45.5%;
+    z-index: 3;
+    transform: scale(0.75);
     }
 
 
@@ -105,9 +105,9 @@
     right: 258px;
 
     @include media-tablet{
-        transform: scale(0.56, 0.565) rotate(90deg);
-        top: 67px;
-        right: 195px;
+        transform: scale(0.75, 0.75) rotate(90deg);
+        top: 10.5%;
+        right: 22%;
     }
 
    
@@ -125,8 +125,8 @@
     right: 668px;
     @include media-tablet{
         top: 10%;
-        right: 55%;
-        transform: scale(0.56, 0.565);
+        right: 62%;
+        transform: scale(0.75, 0.75);
     }
 
 
@@ -141,9 +141,9 @@
 
     right: 233px;
     @include media-tablet{
-        transform: scale(-0.56, 0.55) rotate(90deg);
-        top: 10.5%;
-        right: 22.5%;
+        transform: scale(-0.75, 0.75) rotate(90deg);
+    top: 10.5%;
+    right: 19%;
     }
  
 }
@@ -160,9 +160,9 @@
     top: 115px;
     left: 123px;
     @include media-tablet{
-        transform: scale(0.55, 0.568);
+        transform: scale(0.75, 0.75);
         top: 20.8%;
-        left: 16%;
+        left: 9%;
     }
 }
 
@@ -171,8 +171,9 @@
     right: 199px;
 
     @include media-tablet{
-        top: 33.5%;
-        right: 17.5%;
+        transform: scale(0.75, 0.75);
+    top: 32.5%;
+    right: 14.5%;
     }
     
   
@@ -185,6 +186,9 @@
     top: -50%;
     position: relative;
     margin: 0 auto;
+    @include media-tablet{
+       max-width: 100%;
+    }
 }
 
 .slider_arrow {
@@ -198,8 +202,8 @@
     left: 0px;
     @include media-tablet{
         transform: scale(0.55, 0.568);
-        left: 2.4%;
-        bottom: -32px;
+        left: 3.4%;
+        bottom: -22px;
         /* bottom: 17%; */
         /* top: 10%; */
         width: 3%;
@@ -210,9 +214,9 @@
     right: 0px;
 
     @include media-tablet{
-        right: 27.5%;
-    bottom: -22px;
-    width: 1.7%;
+        right: 3.5%;
+        bottom: -13px;
+        width: 1.7%;
     }
 
    
