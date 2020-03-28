@@ -20,6 +20,10 @@
       letter-spacing: 0.2px;
       word-spacing: -2.6px;
       color: #666d89;
+      @include media-tablet{
+
+        margin-top: 32px;
+      }
   }
 
   .button {
@@ -30,6 +34,8 @@
     border-radius: 3px;
     padding: 3px 6px 3px 6px;
     color: #666d89;
+
+
   }
 
   .portfolio_buttons {
@@ -37,6 +43,10 @@
     font-size: 12px;
     padding-left: 41.3px;
     margin-top: 20px;
+    @include media-tablet{
+
+      margin-top: 48px;
+    }
   }
   .button:hover {
     cursor: pointer;

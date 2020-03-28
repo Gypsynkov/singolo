@@ -3,6 +3,10 @@
     height: 600px;
     background-color: #f06c64;
     user-select: none;
+    @include media-tablet{
+       
+        height: 456px;
+    }
 }
 
 .slider_content {   
@@ -21,10 +25,11 @@
 }
 
 .all_phone {
-    width: 1020px;
+    max-width: 100%;
     height: 594px;
     position: relative;
     margin: auto;
+
 }
 
 .slide {
@@ -54,6 +59,11 @@
 .phone_one {
     top: 53px;
     left: 112px;
+    @include media-tablet {
+        transform: scale(0.565, 0.567);
+        top: 11.1%;
+        left: 14.5%;
+    }
 }
 
 .button_one {
@@ -61,6 +71,12 @@
     left: 198px;
     top: 460px;
     z-index: 2;
+    @include media-tablet{
+        left: 198px;
+    top: 386px;
+    z-index: 2;
+    transform: scale(0.5);
+    }
 }
 
 .slider_button:hover {
@@ -72,12 +88,29 @@
     left: 433px;
     top: 260px;
     z-index: 2;
+
+    @include media-tablet{
+        left: 331px;
+        top: 274px;
+        z-index: 3;
+        transform: scale(0.565);
+    }
+
+
 }
 
 .phone_two {
     transform: rotate(90deg);
     top: 52px;
     right: 258px;
+
+    @include media-tablet{
+        transform: scale(0.56, 0.565) rotate(90deg);
+        top: 67px;
+        right: 195px;
+    }
+
+   
 }
 
 .slider_shadow {
@@ -90,6 +123,14 @@
 
 
     right: 668px;
+    @include media-tablet{
+        top: 10%;
+        right: 55%;
+        transform: scale(0.56, 0.565);
+    }
+
+
+
 }
 
 .shadow_two {
@@ -99,23 +140,45 @@
 
 
     right: 233px;
+    @include media-tablet{
+        transform: scale(-0.56, 0.55) rotate(90deg);
+        top: 10.5%;
+        right: 22.5%;
+    }
+ 
 }
 
 .slider_img {
     position: absolute;
-
+    @include media-tablet{
+        transform: scale(0.55, 0.568);
+    }
     z-index: 3;
 }
 
 .img_one {
     top: 115px;
     left: 123px;
+    @include media-tablet{
+        transform: scale(0.55, 0.568);
+        top: 20.8%;
+        left: 16%;
+    }
 }
 
 .img_two {
     top: 185px;
     right: 199px;
+
+    @include media-tablet{
+        top: 33.5%;
+        right: 17.5%;
+    }
+    
+  
 }
+
+
 
 .arrows {
     width: 1020px;
@@ -133,10 +196,26 @@
 
 .arrow_left {
     left: 0px;
+    @include media-tablet{
+        transform: scale(0.55, 0.568);
+        left: 2.4%;
+        bottom: -32px;
+        /* bottom: 17%; */
+        /* top: 10%; */
+        width: 3%;
+    }
 }
 
 .arrow_right {
     right: 0px;
+
+    @include media-tablet{
+        right: 27.5%;
+    bottom: -22px;
+    width: 1.7%;
+    }
+
+   
 }
 
 @keyframes left {
