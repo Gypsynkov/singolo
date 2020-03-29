@@ -5,6 +5,11 @@
     @include media-tablet{
       height: 625px;
     }
+    @include media-mobile{
+      height: 969px;
+    }
+
+   
   }
   .quote_content_promo{
     width: 92.15686%;
@@ -31,6 +36,12 @@
       padding-top: 61px;
     padding-left: 13px;
     }
+    @include media-mobile{
+      padding-top: 47px;
+    padding-left: 16px;
+    }
+
+   
   }
 .quote_content__promo_text{
   font-size: 18px;
@@ -53,6 +64,13 @@
   flex-direction: row;
     margin: 0 auto;
     width: 92.15686%;
+    @include media-mobile{
+  
+      padding-top: 27px;
+      padding-left: 7px;
+      display: block;
+    }
+
 }
 
 .quote_content__promo_form{
@@ -79,6 +97,10 @@ input, textarea{
     padding-left: 8px;
     width: 152%;
   }
+  @include media-mobile{
+  
+    width: 144%;
+  }
 }
 #name::-webkit-input-placeholder{
   font-size: 12px;
@@ -101,6 +123,10 @@ input, textarea{
     margin-top: 13px;
     padding-left: 10px;
     width: 152%;
+  }
+  @include media-mobile{
+  
+    width: 144%;
   }
 }
 
@@ -127,6 +153,10 @@ input, textarea{
     margin-top: 12px;
     padding-left: 7px;
     width: 152%;
+  }
+  @include media-mobile{
+  
+    width: 144%;
   }
 }
 
@@ -157,6 +187,10 @@ input, textarea{
     padding-top: 3px;
     margin-top: 12px;
   }
+  @include media-mobile{
+  
+    width: 144%;
+  }
 }
 
 
@@ -184,6 +218,11 @@ input, textarea{
   text-transform: uppercase;
   padding-bottom: 5px;
   transition: all .3s;
+@include media-mobile{
+  margin-top: 45px;
+    margin-left: 65px;
+}
+
   
 }
 .quote_content__promo_form_button:hover{
@@ -203,11 +242,19 @@ input, textarea{
   @include media-tablet{
     padding-top: 26px;
   }
+
+  @include media-mobile{
+    margin-left: 11px;
+  }
 }
 
 .quote_content__promo_contact_info{
   @include media-tablet{
     padding-left: 23%;
+  }
+  @include media-mobile{
+    padding-left: 0%;
+    padding-top: 1px;
   }
 
 }
@@ -226,6 +273,11 @@ input, textarea{
   @include media-tablet{
     padding-top: 2px;
   }
+  @include media-mobile{
+    padding-top: 3px;
+  margin-left: 11px;
+  }
+  
 }
 .location{
   background-image: url(assets/image/singolo3/location.svg);
@@ -234,6 +286,12 @@ input, textarea{
 .quote_content__promo_location, .quote_content__promo_phone, .quote_content__promo_mail{
   display: flex;
   margin-left: 17px;
+@include media-mobile{
+  margin-top: -5px;
+  display: flex;
+  margin-left: 7px;
+}
+  
 }
 .quote_content__promo_phone{
   margin-top: -21px;
@@ -273,6 +331,10 @@ input, textarea{
   @include media-tablet {
     margin-top: 70px;
   }
+  @include media-mobile {
+    margin-top: 39px;
+  }
+  
 }
 
 .quote_footer_content{
@@ -304,6 +366,9 @@ input, textarea{
   word-spacing: -1px;
   padding-top: 27px;
   margin-left: 2px;
+  @include media-mobile{
+    display: none;
+  }
 }
 
 .quote_social_list{
@@ -345,4 +410,10 @@ margin-top: 21px;
   @include media-tablet {
     padding-right: 11px;
   }
+
+  @include media-mobile{
+    
+  padding-right: 96px;
+  }
+
 }

@@ -1,5 +1,4 @@
 
-
 .portfolio {
   margin: auto;
   width: 100%;
@@ -10,6 +9,12 @@
     height: 1096px;
   
   }
+
+  @include media-mobile{
+    height: 838px;
+  
+  }
+
 }
 
 .portfolio_content {
@@ -22,7 +27,9 @@
   flex-direction: column;
   @include media-tablet{
     height: 1020px;
-  
+  }
+  @include media-mobile{
+    height: 838px;
   }
 }
 
@@ -36,6 +43,8 @@
   flex-wrap: wrap;
   margin-top: 2.5px;
   justify-content: space-between;
+
+
   @include media-tablet{
     max-width: 100%;
     padding-left: 20px;
@@ -47,8 +56,33 @@
     /* overflow: hidden; */
     transform: scale(0.98);
   }
+
+  @include media-mobile{
+    height: 545px;
+    padding-top: 40px;
+    max-width: 100%;
+    padding-left: 0px;
+    padding-right: 65px;
+    /* display: flex; */
+    flex-wrap: wrap;
+    /* margin-top: 2.5px; */
+    justify-content: space-around;
+    overflow: hidden;
+     /*transform: scale(0.98);*/
+}
+  
+
+
 }
 
 .image {
   margin-top: 20px;
+
+  @include media-mobile{
+    margin-top: -46px;
+    transform: scale(0.69);
+    /* margin-left: -110px; */
+    margin-right: -70px;
+   
+  }
 }

@@ -3,7 +3,12 @@
     height: 728px;
     margin: 0 auto;
     background-color: #f1f1f1;
+    @include media-mobile{
+      height: 1754px;
+    }
   }
+
+ 
   .about_footer_bottom{
  max-width: 100%;
     height: 6px;
@@ -16,6 +21,11 @@
     @include media-tablet{
       height: 665px;
     }
+    @include media-mobile{
+      height: 1754px;
+    }
+
+    
   }
   .about_footer_text_content{
     height: 218px;
@@ -39,6 +49,11 @@
       margin-top: 61px;
       margin-left: 11px;
     }
+    @include media-mobile{
+      margin-top: 43px;
+      margin-left: 16px;
+    }
+  
   }
   .about_foot_text_one{
   
@@ -71,6 +86,17 @@
       padding-left: 5%;
      
     }
+
+    @include media-mobile{
+     
+      grid-template-columns: 1fr;
+      padding-top: 24%;
+      padding-left: 12%;
+     
+    }
+
+
+
   }
 
   .about_footer_photo_block img{
@@ -191,4 +217,27 @@
   }
   .element_linkedin{
     margin-left: 4px;
+  }
+
+  .forMobile{
+    display: none;
+    @include media-mobile{
+      display: block;
+      padding: 7px;
+      margin-left: -12px;
+    }
+  }
+
+  .forDesktop{
+    @include media-mobile{
+      display: none;
+    }
+  }
+
+  .photoForMobileFirst img{
+
+  @include media-mobile{
+    transform: scale(1.04);
+  }
+
   }
