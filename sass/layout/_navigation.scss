@@ -1,7 +1,9 @@
 .header{
     height: 90px;
     background-color: #2d303a;
-    
+    @include media-mobile{
+        height: 67px;
+    }
    
 
 }
@@ -55,6 +57,13 @@
     @include media-tablet{
         margin-left: 1.48%;
     }
+    @include media-mobile{
+        
+        padding-left: 37%;
+    margin-top: 4px;
+    font-size: 19px;
+    }
+    
     
    
 }
@@ -90,6 +99,10 @@
     @include media-tablet{
         margin-top: 0px;
     }
+    @include media-mobile{
+        display: none;
+    }
+    
 
 }
 

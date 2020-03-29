@@ -18,24 +18,35 @@
             <h1 ></h1>
             <div class="header">
                 <div class="header_content">
-                    <div class="header_content_logo">
-                        <p class="boring-text">Singolo</p>
+                    <div class="header_content_logo " id="logo">
+                        <span class="hamburger" id="hamburger" onclick="closeMenu()">
+                            <span class="hamburger__line"></span>
+                            </span>
+                        <p class="boring-text"  >Singolo</p>
                     </div>
+
+
                     <nav class="header_content_navigator">
                         <div class="header_content_menu">
 
                             <ul id="menu" class="header_content_menu_navigation">
+                               
                                 <li class="tag_link"><a id ="home_link" class="tag" href="#pseudo_head">Home</a></li>
                                 <li class="tag_link"><a id ="services_link" class="tag" href="#services">Services</a></li>
                                 <li class="tag_link"><a id ="portfolio_link" class="tag" href="#portfolio">Portfolio</a></li>
                                 <li class="tag_link"><a id ="about_link" class="tag" href="#about">About</a></li>
                                 <li class="tag_link"><a id ="contact_link"  class="tag" href="#contact">Contact</a></li>
+                          
                             </ul>
 
                         </div>
                     </nav>
+
+
                 </div>
             </div>
+
+            <div id="content-burger" onclick="closeMenu()"></div>
             <div class="header_content_bottom">
 
             </div>
@@ -232,14 +243,78 @@
                         dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</div>
                 </div>
                 <div class="about_footer_photo_block">
-                    <div class="photo"><img src="assets/image/singolo2/photo 1.png" alt="photo"></div>
-                    <div class="photo"><img src="assets/image/singolo2/photo 2.png" alt="photo"></div>
-                    <div class="photo"><img class="error" src="assets/image/singolo2/photo 3.png" alt="photo"></div>
+                    <div class="photo  "><img src="assets/image/singolo2/photo 1.png" alt="photo">
+                        <div class="about_description forMobile">
+                            <div class="about_foot_description_head_one">Adam Jensen</div>
+                            <div class="about_foot_description_text_one">Quisque luctus, quam eget molestie commodo, lacus
+                                purus
+                                cursus purus, nec rutrum tellus dolor id lorem.</div>
+                            <div class="about_foot_description_head_three_icons">
+                                <ul class="social_list">
+                                    <li class="element_facebook"><a href="" class="item_social"><i
+                                                class="icon-facebook"></i></a></li>
+                                    <li class="element_gplus"><a href="" class="item_social"><i class="icon-gplus"></i></a>
+                                    </li>
+                                    <li class="element_twitter"><a href="" class="item_social"><i
+                                                class="icon-twitter"></i></a>
+                                    </li>
+                                    <li class="element_linkedin"><a href="" class="item_social"><i
+                                                class="icon-linkedin"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    
+                    </div>
+                    <div class="photo"><img src="assets/image/singolo2/photo 2.png" alt="photo">
+                        <div class="about_description forMobile">
+                            <div class="about_foot_description_head_two">Desmond Miles</div>
+                            <div class="about_foot_description_text_two">Curabitur vestibulum eget mauris quis laoreet.
+                                Phasellus
+                                in
+                                quam laoreet, viverra lacus ut, ultrices velit.</div>
+                            <div class="about_foot_description_head_three_icons">
+                                <ul class="social_list">
+                                    <li class="element_facebook"><a href="" class="item_social"><i
+                                                class="icon-facebook"></i></a></li>
+                                    <li class="element_gplus"><a href="" class="item_social"><i class="icon-gplus"></i></a>
+                                    </li>
+                                    <li class="element_twitter"><a href="" class="item_social"><i
+                                                class="icon-twitter"></i></a>
+                                    </li>
+                                    <li class="element_linkedin"><a href="" class="item_social"><i
+                                                class="icon-linkedin"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="photo"><img class="error" src="assets/image/singolo2/photo 3.png" alt="photo">
+                        <div class="about_description forMobile">
+                            <div class="about_foot_description_head_three">Scolara Visari</div>
+    
+                            <div class="about_foot_description_text_three">Nulla sed nunc et tortor luctus faucibus. Morbi
+                                at
+                                aliquet
+                                turpis, et consequat felis. Quisque condimentum.</div>
+                            <div class="about_foot_description_head_three_icons">
+                                <ul class="social_list">
+                                    <li class="element_facebook"><a href="" class="item_social"><i
+                                                class="icon-facebook"></i></a></li>
+                                    <li class="element_gplus"><a href="" class="item_social"><i class="icon-gplus"></i></a>
+                                    </li>
+                                    <li class="element_twitter"><a href="" class="item_social"><i
+                                                class="icon-twitter"></i></a>
+                                    </li>
+                                    <li class="element_linkedin"><a href="" class="item_social"><i
+                                                class="icon-linkedin"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
-                <div class="about_footer_photo_description">
+                <div class="about_footer_photo_description forDesktop">
                     <div class="about_description">
-                        <div class="about_foot_description_head_one">Adam Jensen</div>
+                        <div class="about_foot_description_head_one forDesktop">Adam Jensen</div>
                         <div class="about_foot_description_text_one">Quisque luctus, quam eget molestie commodo, lacus
                             purus
                             cursus purus, nec rutrum tellus dolor id lorem.</div>
@@ -258,7 +333,7 @@
                         </div>
                     </div>
                     <div class="about_description">
-                        <div class="about_foot_description_head_two">Desmond Miles</div>
+                        <div class="about_foot_description_head_two ">Desmond Miles</div>
                         <div class="about_foot_description_text_two">Curabitur vestibulum eget mauris quis laoreet.
                             Phasellus
                             in
@@ -278,7 +353,7 @@
                         </div>
                     </div>
                     <div class="about_description">
-                        <div class="about_foot_description_head_three">Scolara Visari</div>
+                        <div class="about_foot_description_head_three ">Scolara Visari</div>
 
                         <div class="about_foot_description_text_three">Nulla sed nunc et tortor luctus faucibus. Morbi
                             at
