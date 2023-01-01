@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/Gypsynkov/singolo#readme",
   "dependencies": {
-    "webpack": "^4.42.0"
+    "webpack": "^5.75.0"
   },
   "devDependencies": {
     "pixel-glass": "^1.0.13"
